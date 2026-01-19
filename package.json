@@ -1,0 +1,47 @@
+{
+  "name": "expressql",
+  "version": "1.0.0",
+  "description": "Production-ready Express boilerplate with GraphQL and Prisma.",
+  "keywords": [
+    "express",
+    "graphql",
+    "prisma",
+    "cli",
+    "boilerplate",
+    "api",
+    "backend",
+    "nodejs",
+    "scaffold",
+    "generator"
+  ],
+  "homepage": "https://github.com/DeveloperAromal/Expressql#readme",
+  "bugs": {
+    "url": "https://github.com/DeveloperAromal/Expressql/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeveloperAromal/Expressql.git"
+  },
+  "license": "ISC",
+  "author": "Aromal S",
+  "type": "module",
+  "bin": {
+    "expressql": "dist/cli/index.js"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx src/cli/index.ts",
+    "build": "tsc",
+    "start": "node dist/cli/index.js"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "templates"
+  ],
+  "devDependencies": {
+    "@types/node": "^25.0.9",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
