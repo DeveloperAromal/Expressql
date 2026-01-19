@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+
+    "rootDir": "src",
+    "outDir": "dist",
+
+    "baseUrl": "src",
+    "paths": {
+      "@utils/*": ["utils/*"],
+      "@cli/*": ["cli/*"],
+      "@core/*": ["core/*"]
+    },
+
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+  "include": ["src"]
+}
