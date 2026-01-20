@@ -1,7 +1,7 @@
-// import exampleUserCreateService from "../services/example.service";
+// import exampleUserCreateService from "@modules/test/services/example.service";
 // import { Request, Response } from "express";
-// import { formatteAPI } from "../../../helpers/apiFormater";
-// import { User } from "../../types/user.type";
+// import { formatteAPI } from "@helpers/apiFormater";
+// import { User } from "@modules/types/user.type";
 
 
 

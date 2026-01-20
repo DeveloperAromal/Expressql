@@ -1,34 +1,26 @@
-// {
-//   "compilerOptions": {
-//     "target": "ES2020",
-//     "module": "NodeNext",
-//     "moduleResolution": "NodeNext",
-//     "rootDir": "src",
-//     "outDir": "dist",
-
-//     "baseUrl": ".",
-//     "paths": {
-//       "@/*": ["src/*"],
-//       "@": ["src"]
-//     },
-
-//     "strict": true,
-//     "esModuleInterop": true,
-//     "skipLibCheck": true
-//   },
-//   "include": ["src/**/*.ts"],
-//   "exclude": ["node_modules", "prisma"]
-// }
-
-
-
 {
   "compilerOptions": {
     "target": "ES2020",
     "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+
     "rootDir": "src",
     "outDir": "dist",
-    "moduleResolution": "NodeNext",
+
+    "baseUrl": "src",
+    "paths": {
+      "@app/*": ["app/*"],
+      "@config/*": ["config/*"],
+      "@helpers/*": ["helpers/*"],
+      "@lib/*": ["lib/*"],
+      "@modules/*": ["modules/*"],
+      "@controllers/*": ["modules/controllers/*"],
+      "@routes/*": ["modules/routes/*"],
+      "@services/*": ["modules/services/*"],
+      "@types/*": ["types/*"],
+      "@shared/*": ["shared/*"]
+    },
+
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true

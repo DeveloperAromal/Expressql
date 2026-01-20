@@ -1,5 +1,5 @@
-// import prisma from "../../../lib/prisma";
-// import { User } from "../../types/user.type";
+// import { User } from "@modules/types/user.type";
+// import prisma from "@lib/prisma";
 
 
 // export default async function exampleUserCreateService(data: User) {

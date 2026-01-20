@@ -5,7 +5,7 @@ import Logger from "./helpers/logger";
 
 dotenv.config();
 
-const PORT = process.env.port;
+const PORT = process.env.port || 5000;
 
 Logger.info("Starting server...");
 
