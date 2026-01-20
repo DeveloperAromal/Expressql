@@ -16,7 +16,6 @@
   ],
   "keywords": [
     "express",
-    "graphql",
     "prisma",
     "cli",
     "boilerplate",
