@@ -1,8 +1,10 @@
 import express, { type Request, type Response } from "express";
 import cors from "cors";
 
+// import exampleRoute from "./modules/test/routes/example.route"
 
-import exampleRoute from "./modules/test/routes/example.route"
+
+
 const app = express();
 
 app.use(express.json());
@@ -19,7 +21,7 @@ app.get("/api/v1", (req: Request, res: Response) => {
 
 
 
-app.use(baseRoute, exampleRoute);
+// app.use(baseRoute, exampleRoute);
 
 
 export default app;

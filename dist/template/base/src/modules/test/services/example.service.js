@@ -1,7 +1,6 @@
+"use strict";
 // import prisma from "../../../lib/prisma";
 // import { User } from "../../types/user.type";
-
-
 // export default async function exampleUserCreateService(data: User) {
 //   return prisma.user.create({
 //     data: {
