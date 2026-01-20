@@ -2,6 +2,18 @@
   "name": "expressql",
   "version": "1.0.0",
   "description": "Production-ready Express boilerplate with GraphQL and Prisma.",
+  "bin": {
+    "expressql": "bin/expressql"
+  },
+  "scripts": {
+    "dev": "tsx src/cli/index.ts",
+    "build": "tsc",
+    "start": "node dist/cli/index.js"
+  },
+  "files": [
+    "dist",
+    "templates"
+  ],
   "keywords": [
     "express",
     "graphql",
@@ -14,37 +26,28 @@
     "scaffold",
     "generator"
   ],
-  "homepage": "https://github.com/DeveloperAromal/Expressql#readme",
-  "bugs": {
-    "url": "https://github.com/DeveloperAromal/Expressql/issues"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DeveloperAromal/Expressql.git"
   },
-  "license": "ISC",
+  "homepage": "https://github.com/DeveloperAromal/Expressql#readme",
+  "bugs": {
+    "url": "https://github.com/DeveloperAromal/Expressql/issues"
+  },
   "author": "Aromal S",
-  "type": "module",
-  "bin": {
-    "expressql": "dist/cli/index.js"
-  },
-  "main": "dist/index.js",
-  "scripts": {
-    "dev": "tsx src/cli/index.ts",
-    "build": "tsc",
-    "start": "node dist/cli/index.js"
-  },
-  "files": [
-    "dist",
-    "bin",
-    "templates"
-  ],
+  "license": "ISC",
   "devDependencies": {
     "@types/node": "^25.0.9",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "chalk": "^5.6.2"
+    "chalk": "^5.6.2",
+    "module-alias": "^2.2.2"
+  },
+  "_moduleAliases": {
+    "@utils": "dist/utils",
+    "@core": "dist/core",
+    "@cli": "dist/cli"
   }
 }

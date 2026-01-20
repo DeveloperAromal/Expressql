@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+
+
+try {
+  const ma = require("module-alias/register");
+} catch (err) {
+  console.error(
+    err && err.message,
+  );
+}
+
+try {
+  const resolved = require.resolve("@utils/Logger");
+} catch (err) {
+  console.error(
+    "[expressql] debug: require.resolve(@utils/Logger) failed:",
+    err && err.message,
+  );
+}
+
+try {
+  const cli = require("../dist/cli/index.js");
+  const argv = process.argv.slice(2);
+  if (argv[0] === "init" && typeof cli.initCommand === "function") {
+    cli.initCommand(argv[1]);
+  } else if (typeof cli.default === "function") {
+    cli.default(argv);
+  }
+} catch (err) {
+  console.error(
+    err && err.stack ? err.stack : err,
+  );
+  process.exit(1);
+}
+
