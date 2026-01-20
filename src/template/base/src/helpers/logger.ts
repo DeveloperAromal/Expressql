@@ -9,24 +9,24 @@ class Logger {
     switch (type) {
       case "success":
         console.log(
-          chalk.green(`[FUMEHUB] [SUCCESS] ${timestamp} - ${message}`),
+          chalk.green(`[SUCCESS] ${timestamp} - ${message}`),
         );
         break;
 
       case "info":
-        console.log(chalk.cyan(`[FUMEHUB] [INFO] ${timestamp} - ${message}`));
+        console.log(chalk.cyan(`[INFO] ${timestamp} - ${message}`));
         break;
 
       case "warn":
-        console.log(chalk.yellow(`[FUMEHUB] [WARN] ${timestamp} - ${message}`));
+        console.log(chalk.yellow(`[WARN] ${timestamp} - ${message}`));
         break;
 
       case "error":
-        console.log(chalk.red(`[FUMEHUB] [ERROR] ${timestamp} - ${message}`));
+        console.log(chalk.red(`[ERROR] ${timestamp} - ${message}`));
         break;
 
       default:
-        console.log(chalk.magenta(`[FUMEHUB] [LOG] ${timestamp} - ${message}`));
+        console.log(chalk.magenta(`[LOG] ${timestamp} - ${message}`));
     }
   }
 
