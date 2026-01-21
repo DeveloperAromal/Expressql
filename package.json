@@ -1,7 +1,7 @@
 {
   "name": "expressql",
-  "version": "1.0.3",
-  "description": "Production-ready Express boilerplate with GraphQL and Prisma.",
+  "version": "1.0.6",
+  "description": "Production-ready Express boilerplate",
   "bin": {
     "expressql": "bin/expressql"
   },

@@ -1,12 +1,23 @@
 #!/usr/bin/env node
 
-
 try {
   const ma = require("module-alias/register");
 } catch (err) {
-  console.error(
-    err && err.message,
-  );
+  console.error(err && err.message);
+}
+
+// Ensure aliases are registered explicitly (fallback) so `@utils` etc. resolve
+try {
+  const path = require("path");
+  const moduleAlias = require("module-alias");
+  const root = path.resolve(__dirname, "..");
+  moduleAlias.addAliases({
+    "@utils": path.join(root, "dist", "utils"),
+    "@core": path.join(root, "dist", "core"),
+    "@cli": path.join(root, "dist", "cli"),
+  });
+} catch (e) {
+  // not fatal; continue — the register above may have worked
 }
 
 try {
@@ -27,9 +38,6 @@ try {
     cli.default(argv);
   }
 } catch (err) {
-  console.error(
-    err && err.stack ? err.stack : err,
-  );
+  console.error(err && err.stack ? err.stack : err);
   process.exit(1);
 }
-

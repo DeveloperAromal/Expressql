@@ -9,19 +9,19 @@ class Logger {
         const timestamp = new Date().toISOString();
         switch (type) {
             case "success":
-                console.log(chalk_1.default.green(`[FUMEHUB] [SUCCESS] ${timestamp} - ${message}`));
+                console.log(chalk_1.default.green(`[SUCCESS] ${timestamp} - ${message}`));
                 break;
             case "info":
-                console.log(chalk_1.default.cyan(`[FUMEHUB] [INFO] ${timestamp} - ${message}`));
+                console.log(chalk_1.default.cyan(`[INFO] ${timestamp} - ${message}`));
                 break;
             case "warn":
-                console.log(chalk_1.default.yellow(`[FUMEHUB] [WARN] ${timestamp} - ${message}`));
+                console.log(chalk_1.default.yellow(`[WARN] ${timestamp} - ${message}`));
                 break;
             case "error":
-                console.log(chalk_1.default.red(`[FUMEHUB] [ERROR] ${timestamp} - ${message}`));
+                console.log(chalk_1.default.red(`[ERROR] ${timestamp} - ${message}`));
                 break;
             default:
-                console.log(chalk_1.default.magenta(`[FUMEHUB] [LOG] ${timestamp} - ${message}`));
+                console.log(chalk_1.default.magenta(`[LOG] ${timestamp} - ${message}`));
         }
     }
     static info(message) {
